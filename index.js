@@ -1,18 +1,19 @@
 // Задание 1
 const delay = (ms) => {
   // Твой код
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve();
+      resolve(ms);
     }, ms);
   });
 };
 
-const logger = (time) => console.log(`Resolved after ${time}ms`);
+const loger = (time) => console.log(`Resolved after ${time}ms`);
+console.log(loger);
 
-delay(2000).then(logger); // Resolved after 2000ms
-delay(1000).then(logger); // Resolved after 1000ms
-delay(1500).then(logger); // Resolved after 1500ms
+// delay(2000).then(logger); // Resolved after 2000ms
+// delay(1000).then(logger); // Resolved after 1000ms
+// delay(1500).then(logger); // Resolved after 1500ms
 // Задание 2
 const users = [
   { name: "Mango", active: true },
